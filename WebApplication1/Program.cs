@@ -1,4 +1,5 @@
 using WebApplication1.Context;
+using WebApplication1.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<AppDbContext, AppDbContext>();
+builder.Services.AddScoped<IClientService, ClientService>();
 
 builder.Services.AddDbContext<AppDbContext>();
 
