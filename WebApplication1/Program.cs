@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddScoped<AppDbContext, AppDbContext>();
 builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
 
 builder.Services.AddDbContext<AppDbContext>();
 
